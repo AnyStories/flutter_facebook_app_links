@@ -7,7 +7,7 @@ class FlutterFacebookAppLinks {
       const MethodChannel("plugins.remedia.it/flutter_facebook_app_links");
 
   static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
+    final String version = await _channel.invokeMethod('getPlatformVersion')??"";
     return version;
   }
 
